@@ -1,0 +1,54 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: rgb(153, 0, 255);
+    overflow: hidden;
+}
+
+#logo {
+    position: fixed;
+    color: azure;
+    font-family: monospace;
+    line-height: 1.1;
+    margin: 0;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    transition: all 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 10;
+}
+
+#logo.moving {
+    top: 3%;
+    left: 60%;
+}
+
+.dot {
+	display: inline-block;
+	animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+	50% {
+		opacity: 0;
+	}
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 999;
+}
+
+.pixel {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(47, 0, 255);
+    transition: opacity 1s ease;
+}
