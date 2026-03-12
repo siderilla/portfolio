@@ -10,6 +10,7 @@
 
 // // flashingDot(dot);
 
+
 const overlay = document.getElementById('overlay');
 const logo = document.getElementById('logo');
 
@@ -18,12 +19,24 @@ const pixelSize = 100;
 function createOverlay() {
 	const cols = Math.ceil(window.innerWidth / pixelSize);
 	const rows = Math.ceil(window.innerHeight / pixelSize);
-	const total = cols * rows;
 
-	for (let i = 0; i < total; i++) {
-		const p = document.createElement('div');
-		p.className = 'pixel';
-		overlay.appendChild(p);
+	for (let r = 0; r < rows; r++) {
+		for (let c = 0; c < cols; c++) {
+			const p = document.createElement('div');
+			p.className = 'pixel';
+
+			// larghezza residua per l'ultima colonna
+			const isLastCol = c === cols - 1;
+			const remainW = window.innerWidth - (cols - 1) * pixelSize;
+			p.style.width = isLastCol ? remainW + 'px' : pixelSize + 'px';
+
+			// stessa cosa per l'ultima riga
+			const isLastRow = r === rows - 1;
+			const remainH = window.innerHeight - (rows - 1) * pixelSize;
+			p.style.height = isLastRow ? remainH + 'px' : pixelSize + 'px';
+
+			overlay.appendChild(p);
+		}
 	}
 }
 
