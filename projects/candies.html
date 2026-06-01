@@ -1,5 +1,37 @@
 <!DOCTYPE html>
 <html lang="it">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Siderilla - Candies Project</title>
+    <link rel="stylesheet" href="../css/candies.css">
+</head>
+
+<body>
+
+	<div id="candybox"></div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+	<script>
+		const anim = lottie.loadAnimation({
+			container: document.getElementById('candybox'),
+			path: '../assets/candybox/candybox.json',
+			renderer: 'svg',
+			loop: false,
+			autoplay: false
+		})
+
+		document.getElementById('candybox').addEventListener('click', () => {
+			anim.play()
+		})
+	</script>
+
+</body>
+
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <title>Siderilla - Candies Project</title>
@@ -16,4 +48,4 @@
 
     <script type="module" src="../js/candies.js"></script>
 </body>
-</html>
+</html> -->
