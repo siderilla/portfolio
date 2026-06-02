@@ -8,13 +8,15 @@ const anim = lottie.loadAnimation({
 
 let opened = false
 document.getElementById('candybox').addEventListener('click', () => {
-  opened ? anim.playSegments([7, 0], true) : anim.playSegments([0, 7], true)
-  opened = !opened
+	opened ? anim.playSegments([7, 0], true) : anim.playSegments([0, 7], true)
+	opened = !opened
 })
 
-document.getElementById('candybox').addEventListener('click', () => {
-	anim.play()
-})
+let tl = gsap.timeline();
+tl.to("#candybox", {
+	duration: 1,
+	x: 100,
+});
 
 // import * as THREE from 'three';
 

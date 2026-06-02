@@ -4,6 +4,6 @@ body {
 	background-color: rgb(158, 11, 163);
 }
 
-canvas {
-	display: block;
+#candybox {
+	max-width: 400px;
 }
