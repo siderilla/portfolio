@@ -4,14 +4,18 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Siderilla - Candies Project</title>
-    <link rel="stylesheet" href="../css/candies.css">
+	<link rel="stylesheet" href="../css/candies.css">
 </head>
 
 <body>
 
 	<div id="candybox"></div>
+	<svg style="position:absolute; pointer-events:none; opacity:0;">
+		<path id="track" d="M 0,0 Q 200,-200 400,0" />
+	</svg>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
 	<script src="../js/candies.js"></script>
 
 </body>

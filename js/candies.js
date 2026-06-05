@@ -1,3 +1,5 @@
+gsap.registerPlugin(MotionPathPlugin);
+
 const anim = lottie.loadAnimation({
 	container: document.getElementById('candybox'),
 	path: '../assets/candybox/candybox.json',
@@ -12,11 +14,33 @@ document.getElementById('candybox').addEventListener('click', () => {
 	opened = !opened
 })
 
-let tl = gsap.timeline();
-tl.to("#candybox", {
-	duration: 1,
-	x: 100,
+let timeline = gsap.timeline({
+	repeat: -1,
+	yoyo: true
 });
+
+timeline.to("#candybox", {
+  duration: 1,
+  motionPath: {
+    path: "#track",
+    align: "#track",
+    autoRotate: false
+  },
+  ease: "power2.inOut"
+});
+
+// timeline.to("#candybox", {
+// 	duration: 1,
+// 	x: 200,
+// 	y: -50,
+// })
+// .to("#candybox", {
+// 	duration: 1,
+// 	x: 400,
+// 	y: 0,
+// })
+
+
 
 // import * as THREE from 'three';
 
