@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Siderilla's portfolio</title>
 	<link rel="stylesheet" href="css/home.css">
+	<link rel="stylesheet" href="css/cards.css">
 	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 
@@ -30,19 +31,15 @@
 		</header>
 
 		<section id="carousel-section">
-			<div class="arrow">&lt;</div>
-			<div class="card">
-
-				<h3>LVL 99 FULL-STACK</h3>
-				<p>Sperimentazioni biologiche e frattali applicati al codice.</p>
-
-				<button class="project-link">[ ENTER_LOG ]</button>
-			</div>
-			<div class="arrow">&gt;</div>
+			<div class="arrow arrow-left">&lt;</div>
+			<div id="card-container"></div>
+			<div class="arrow arrow-right">&gt;</div>
 		</section>
 	</main>
 
+	<script src="js/projects.js"></script>
 	<script src="js/home.js"></script>
+	<script src="js/carousel.js"></script>
 </body>
 
 </html>
