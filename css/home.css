@@ -153,23 +153,3 @@ header nav {
 	font-size: 0.6rem;
 	gap: 4rem;
 }
-
-.arrow {
-	font-size: 3rem;
-	cursor: pointer;
-	transition: transform 0.2s, color 0.2s;
-}
-
-.arrow:hover {
-	color: rgb(153, 0, 255);
-	transform: scale(1.2);
-}
-
-.card {
-	border: 8px solid white;
-	box-shadow: 8px 8px 0 rgb(153, 0, 255);
-	padding: 2rem;
-	width: 400px;
-	height: 500px;
-	text-align: center;
-}
