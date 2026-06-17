@@ -3,7 +3,7 @@
 	border: 3px solid white;
 	box-shadow: 6px 6px 0 rgb(153, 0, 255);
 	padding: 2rem;
-	width: 300px;
+	width: 400px;
 	min-height: 400px;
 	display: flex;
 	flex-direction: column;
@@ -18,7 +18,7 @@
 }
 
 .card-status {
-	font-size: 0.5rem;
+	font-size: 0.6rem;
 	color: rgb(153, 0, 255);
 	letter-spacing: 0.1em;
 }
@@ -40,19 +40,19 @@
 }
 
 .card-thumbnail-placeholder {
-	font-size: 0.5rem;
+	font-size: 0.6rem;
 	color: rgba(255, 255, 255, 0.3);
 	letter-spacing: 0.1em;
 }
 
 .card-title {
-	font-size: 0.7rem;
+	font-size: 0.9rem;
 	margin: 0;
 	letter-spacing: 0.05em;
 }
 
 .card-description {
-	font-size: 0.5rem;
+	font-size: 0.7rem;
 	margin: 0;
 	line-height: 1.8;
 	color: rgba(255, 255, 255, 0.7);
@@ -66,7 +66,7 @@
 }
 
 .tag {
-	font-size: 0.4rem;
+	font-size: 0.5rem;
 	color: rgb(153, 0, 255);
 	letter-spacing: 0.05em;
 }
@@ -76,7 +76,7 @@
 	border: 2px solid white;
 	color: white;
 	font-family: "Press Start 2P", system-ui;
-	font-size: 0.5rem;
+	font-size: 0.6rem;
 	padding: 0.5rem 1rem;
 	cursor: pointer;
 	transition: background 0.2s, color 0.2s;
@@ -90,7 +90,7 @@
 
 /* --- ARROW --- */
 .arrow {
-	font-size: 2rem;
+	font-size: 3rem;
 	cursor: pointer;
 	transition: transform 0.2s, color 0.2s;
 	user-select: none;
