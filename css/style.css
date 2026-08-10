@@ -1,3 +1,87 @@
+/* html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	overflow: hidden;
+	background-color: rgb(17, 17, 17);
+}
+
+#background {
+	height: 100vh;
+	background-color: rgb(153, 0, 255);
+}
+
+#logo {
+	position: fixed;
+	color: azure;
+	font-family: monospace;
+	line-height: 1.1;
+	margin: 0;
+	top: 50%;
+	left: 60%;
+	transform: translate(-50%, -50%);
+	transition: all 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+	z-index: 10;
+}
+
+#logo.moving {
+	top: 3%;
+	left: 60%;
+}
+
+#dot {
+	display: inline-block;
+	animation: blink 1s steps(1) infinite;
+}
+
+#press-any {
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: "Press Start 2P", monospace; 
+    animation: blink 1.5s steps(1) infinite;
+    
+    visibility: hidden;
+    z-index: 11;
+}
+
+.slide-right {
+    transform: translateX(100vw);
+    transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+#logo.exit, #press-any.exit {
+    left: 160%; 
+}
+
+@keyframes blink {
+	50% {
+		opacity: 0;
+	}
+}
+
+#overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-wrap: wrap;
+	z-index: 999;
+}
+
+.pixel {
+	width: 100px;
+	height: 100px;
+	background-color: rgb(47, 0, 255);
+	transition: opacity 1s ease;
+} */
+
+
 html,
 body {
 	margin: 0;
@@ -121,9 +205,6 @@ body {
 	color: azure;
 	font-family: monospace;
 	z-index: 10;
-	opacity: 0;
-    transition: opacity 1s ease;
-    visibility: hidden;
 }
 
 header nav {
@@ -152,4 +233,24 @@ header nav {
 	justify-content: center;
 	font-size: 0.6rem;
 	gap: 4rem;
+}
+
+.arrow {
+	font-size: 3rem;
+	cursor: pointer;
+	transition: transform 0.2s, color 0.2s;
+}
+
+.arrow:hover {
+	color: rgb(153, 0, 255);
+	transform: scale(1.2);
+}
+
+.card {
+	border: 3px solid white;
+	box-shadow: 3px 3px 0 rgb(153, 0, 255);
+	padding: 2rem;
+	width: 300px;
+	height: 400px;
+	text-align: center;
 }
