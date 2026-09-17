@@ -18,13 +18,4 @@ const projects = [
 		link: "projects/candies.html",
 		thumbnail: null
 	}),
-	
-	new Project({
-		title: "FRACT-OL",
-		description: "Fractal explorer build in C for 42 School",
-		tags: ["C", "MATH", "42"],
-		status: "IN PROGRESS",
-		link: "projects/fractol.html",
-		thumbnail: null
-	})
 ]
