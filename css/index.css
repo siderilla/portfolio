@@ -7,20 +7,21 @@ body {
 	background-color: rgb(17, 17, 17);
 }
 
+/* =========================
+   INTRO
+   ========================= */
+
 #background {
 	position: fixed;
-	/* Aggiunto per farlo scivolare sopra a tutto il resto */
 	top: 0;
 	left: 0;
 	width: 100vw;
 	height: 100vh;
 	background-color: rgb(153, 0, 255);
 	z-index: 50;
-	/* Sta sopra al contenuto principale */
 	transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Classe che verrà aggiunta da JS per far scivolare via lo sfondo */
 #background.slide-right {
 	transform: translateX(100vw);
 }
@@ -36,17 +37,17 @@ body {
 	transform: translate(-50%, -50%);
 	transition: all 1.2s cubic-bezier(0.25, 1, 0.5, 1);
 	z-index: 60;
-	/* Sopra al background viola */
+
+	/* Mantiene l'ASCII dentro la viewport */
+	max-width: 100vw;
+	box-sizing: border-box;
 }
 
 #logo.moving {
 	top: 15%;
-	/* Spostato leggermente più giù per non sovrapporsi al menu */
 	left: 50%;
-	/* Lo centro perfettamente! */
 }
 
-/* Classe per far scivolare via il logo assieme allo sfondo */
 #logo.exit {
 	left: 150%;
 }
@@ -59,19 +60,23 @@ body {
 #press-any {
 	position: fixed;
 	bottom: 40%;
-	/* Lo posiziona nella parte bassa */
 	left: 52%;
-	/* Centrato a metà schermo */
 	transform: translateX(-50%);
-	/* Il trucco per centrarlo al millimetro */
+
 	color: white;
 	font-family: "Press Start 2P", system-ui;
+
 	white-space: nowrap;
+
 	animation: blink 1.5s steps(1) infinite;
+
 	visibility: hidden;
-	/* Nascosto all'inizio */
 	opacity: 0;
-	transition: opacity 0.5s ease, left 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+
+	transition:
+		opacity 0.5s ease,
+		left 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+
 	z-index: 60;
 }
 
@@ -80,7 +85,6 @@ body {
 	opacity: 1;
 }
 
-/* Classe per far scivolare via il testo assieme allo sfondo */
 #press-any.exit {
 	left: 150%;
 }
@@ -91,47 +95,74 @@ body {
 	}
 }
 
+
+/* =========================
+   PIXEL OVERLAY
+   ========================= */
+
 #overlay {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100vw;
 	height: 100vh;
+
 	display: flex;
 	flex-wrap: wrap;
+
 	z-index: 999;
 }
 
 .pixel {
 	width: 100px;
 	height: 100px;
+
 	background-color: rgb(47, 0, 255);
+
 	transition: opacity 1s ease;
 }
 
-/* --- STILI ABBOZZATI PER IL MAIN CONTENT SOTTO --- */
+
+/* =========================
+   MAIN CONTENT
+   ========================= */
+
 #main-content {
 	position: absolute;
 	top: 0;
 	left: 0;
+
 	width: 100vw;
 	height: 100vh;
+
 	display: flex;
 	flex-direction: column;
+
 	color: azure;
 	font-family: monospace;
+
 	z-index: 10;
+
 	opacity: 0;
-    transition: opacity 1s ease;
-    visibility: hidden;
+	visibility: hidden;
+
+	transition: opacity 1s ease;
 }
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
 
 header nav {
 	font-family: "Press Start 2P", system-ui;
+
 	display: flex;
 	justify-content: center;
+
 	gap: 3rem;
 	padding: 2rem;
+
 	font-size: 0.8rem;
 }
 
@@ -144,12 +175,80 @@ header nav {
 	color: rgb(153, 0, 255);
 }
 
+
+/* =========================
+   CAROUSEL
+   ========================= */
+
 #carousel-section {
 	font-family: "Press Start 2P", system-ui;
+
 	flex-grow: 1;
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
 	font-size: 0.6rem;
+
 	gap: 4rem;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+	/* --- ASCII LOGO --- */
+
+	#logo {
+		font-size: clamp(4px, 2.2vw, 9px);
+		width: 100vw;
+		max-width: 100vw;
+		overflow: hidden;
+		white-space: pre;
+	}
+
+	#logo.moving {
+		top: 12%;
+	}
+
+
+	/* --- PRESS ANY BUTTON --- */
+
+	#press-any {
+		white-space: normal;
+
+		width: 180px;
+
+		left: 50%;
+
+		text-align: center;
+
+		font-size: 0.6rem;
+		line-height: 1.8;
+	}
+
+
+	/* --- NAVIGATION --- */
+
+	header nav {
+		gap: 1rem;
+		padding: 1rem;
+
+		font-size: 0.55rem;
+
+		flex-wrap: wrap;
+	}
+
+
+	/* --- CAROUSEL --- */
+
+	#carousel-section {
+		gap: 0.3rem;
+		font-size: 0.5rem;
+		padding: 0 0.25rem;
+	}
 }
