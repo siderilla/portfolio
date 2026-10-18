@@ -10,12 +10,5 @@ class Project {
 }
 
 const projects = [
-	new Project({
-		title: "MUNCHY CANDY",
-		description: "Catch the candy before it disappears",
-		tags: ["ILLUSTRATION", "ANIMATION", "JS"],
-		status: "IN PROGRESS",
-		link: "projects/candies.html",
-		thumbnail: null
-	}),
+	// MUNCHY CANDY temporarily removed from the carousel (files kept in projects/candies.* / css/candies.css / js/candies.js)
 ]
