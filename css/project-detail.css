@@ -1,0 +1,122 @@
+body {
+	margin: 0;
+	min-height: 100vh;
+	background-color: rgb(17, 17, 17);
+	color: azure;
+	font-family: monospace;
+}
+
+.detail-header {
+	padding: 1.5rem;
+}
+
+.back-link {
+	font-family: "Press Start 2P", system-ui;
+	font-size: 0.7rem;
+	color: azure;
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+.back-link:hover {
+	color: rgb(153, 0, 255);
+}
+
+.detail-main {
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 1rem 1.5rem 3rem;
+}
+
+.detail-title {
+	font-family: "Press Start 2P", system-ui;
+	font-size: 1.1rem;
+	letter-spacing: 0.05em;
+	margin: 0 0 1rem;
+}
+
+.detail-description {
+	font-size: 0.9rem;
+	line-height: 1.8;
+	color: rgba(255, 255, 255, 0.7);
+	margin: 0 0 2rem;
+}
+
+.detail-screenshots {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+	gap: 1rem;
+	margin-bottom: 2rem;
+}
+
+.screenshot-placeholder {
+	aspect-ratio: 4 / 3;
+	border: 2px solid white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.6rem;
+	letter-spacing: 0.05em;
+	color: rgba(255, 255, 255, 0.3);
+	font-family: "Press Start 2P", system-ui;
+}
+
+.detail-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	align-items: center;
+}
+
+.detail-btn {
+	font-family: "Press Start 2P", system-ui;
+	font-size: 0.65rem;
+	border: 2px solid white;
+	color: white;
+	background: none;
+	padding: 0.7rem 1.2rem;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background 0.2s, color 0.2s;
+}
+
+.detail-btn:hover {
+	background: white;
+	color: rgb(17, 17, 17);
+}
+
+.detail-btn.secondary {
+	border-color: rgb(153, 0, 255);
+	color: rgb(153, 0, 255);
+}
+
+.detail-btn.secondary:hover {
+	background: rgb(153, 0, 255);
+	color: white;
+}
+
+.detail-btn.pending {
+	border-color: rgba(255, 255, 255, 0.3);
+	color: rgba(255, 255, 255, 0.3);
+	cursor: default;
+}
+
+.detail-btn.pending:hover {
+	background: none;
+	color: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 600px) {
+	.detail-title {
+		font-size: 0.85rem;
+	}
+
+	.detail-description {
+		font-size: 0.75rem;
+	}
+
+	.detail-btn {
+		font-size: 0.55rem;
+		padding: 0.6rem 0.9rem;
+	}
+}
