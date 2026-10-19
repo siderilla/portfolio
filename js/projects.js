@@ -41,7 +41,8 @@ const projects = [
 		status: "IN PROGRESS",
 		thumbnail: null,
 		actions: [
-			{ label: "REPO", href: "https://github.com/siderilla/refund-manager", external: true },
+			{ label: "FRONTEND REPO", href: "https://github.com/siderilla/refund-manager", external: true },
+			{ label: "BACKEND REPO", href: "https://github.com/siderilla/RefundManager", external: true },
 			{ label: "LIVE", href: null }
 		]
 	}),
