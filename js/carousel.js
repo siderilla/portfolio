@@ -2,11 +2,14 @@ let currentIndex = 0;
 
 function updateCarousel() {
 	const cardContainer = document.getElementById('card-container')
-	cardContainer.innerHTML = cardTemplate(projects[currentIndex])
+	const project = projects[currentIndex]
+	cardContainer.innerHTML = cardTemplate(project)
 
-	cardContainer.querySelector('.card').addEventListener('click', () => {
-		window.location.href = projects[currentIndex].link
-	})
+	if (project.link) {
+		cardContainer.querySelector('.card').addEventListener('click', () => {
+			window.location.href = project.link
+		})
+	}
 }
 
 document.querySelector('.arrow-left').addEventListener('click', () => {

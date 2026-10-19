@@ -13,14 +13,16 @@
 	flex-direction: column;
 	gap: 1rem;
 
-	cursor: pointer;
-
 	transition:
 		box-shadow 0.2s,
 		transform 0.2s;
 }
 
-.card:hover {
+.card[data-link] {
+	cursor: pointer;
+}
+
+.card[data-link]:hover {
 	box-shadow: 10px 10px 0 rgb(153, 0, 255);
 	transform: translate(-2px, -2px);
 }
@@ -81,6 +83,13 @@
 	letter-spacing: 0.05em;
 }
 
+.card-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	align-self: flex-start;
+}
+
 .project-link {
 	background: none;
 	border: 2px solid white;
@@ -89,6 +98,8 @@
 	font-size: 0.6rem;
 	padding: 0.5rem 1rem;
 
+	display: inline-block;
+	text-decoration: none;
 	cursor: pointer;
 
 	transition:
@@ -101,6 +112,27 @@
 .project-link:hover {
 	background: white;
 	color: rgb(17, 17, 17);
+}
+
+.project-link.secondary {
+	border-color: rgb(153, 0, 255);
+	color: rgb(153, 0, 255);
+}
+
+.project-link.secondary:hover {
+	background: rgb(153, 0, 255);
+	color: white;
+}
+
+.project-link.pending {
+	border-color: rgba(255, 255, 255, 0.3);
+	color: rgba(255, 255, 255, 0.3);
+	cursor: default;
+}
+
+.project-link.pending:hover {
+	background: none;
+	color: rgba(255, 255, 255, 0.3);
 }
 
 
