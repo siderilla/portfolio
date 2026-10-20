@@ -26,7 +26,7 @@ const projects = [
 	new Project({
 		title: "BEFORE I GO",
 		description: "A short game-jam story about leaving.",
-		tags: ["GAME JAM", "JS", "ITCH.IO"],
+		tags: ["GAME JAM", "JS", "ITCH.IO", "DESKTOP ONLY"],
 		status: "LIVE",
 		thumbnail: null,
 		actions: [
