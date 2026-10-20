@@ -42,6 +42,13 @@ body {
 	margin: 0 0 2rem;
 }
 
+.lang-tag {
+	font-size: 0.6rem;
+	color: rgb(153, 0, 255);
+	letter-spacing: 0.1em;
+	margin: 0 0 0.3rem;
+}
+
 .detail-subtitle {
 	font-family: "Press Start 2P", system-ui;
 	font-size: 0.75rem;
