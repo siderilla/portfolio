@@ -114,6 +114,35 @@ body {
 	color: rgba(255, 255, 255, 0.3);
 }
 
+.detail-split {
+	display: flex;
+	gap: 2rem;
+	align-items: flex-start;
+	margin-bottom: 2rem;
+}
+
+.detail-video {
+	flex: 1 1 60%;
+	max-width: 100%;
+	border: 2px solid white;
+}
+
+.detail-actions-col {
+	flex: 1 1 40%;
+	flex-direction: column;
+	align-items: stretch;
+}
+
+.detail-actions-col .detail-btn {
+	text-align: center;
+}
+
+@media (max-width: 700px) {
+	.detail-split {
+		flex-direction: column;
+	}
+}
+
 @media (max-width: 600px) {
 	.detail-title {
 		font-size: 0.85rem;
